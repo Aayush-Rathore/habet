@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import DownloadButton from "@/components/shared/DownloadButton";
 
 export const metadata: Metadata = {
@@ -17,7 +18,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://habetapk.com/logo.png",
+        url: "https://habetapk.com/logo.jpg",
         width: 512,
         height: 512,
         alt: "HABET APK",
@@ -29,12 +30,24 @@ export const metadata: Metadata = {
     title: "HABET APK 2026 – Live Sports Betting App in India",
     description:
       "HABET APK ek online sports betting aur real money gaming platform hai. Yeh app sirf 18+ users ke liye hai.",
+    images: ["https://habetapk.com/logo.jpg"],
   },
 };
 
 export default function DisclaimerPage() {
   return (
     <main className="container mx-auto max-w-3xl px-4 py-10">
+      {/* Logo */}
+      <div className="flex justify-center mb-8">
+        <Image
+          src="/logo.jpg"
+          alt="HABET APK Logo"
+          width={120}
+          height={120}
+          className="rounded-xl"
+        />
+      </div>
+
       <h1 className="mb-6 text-3xl font-bold leading-tight text-blue-700">
         Disclaimer – HABET APK
       </h1>
@@ -60,6 +73,17 @@ export default function DisclaimerPage() {
           zimmedar nahi honge.
         </p>
         <p className="font-semibold">Play responsibly. Bet wisely.</p>
+        <p>
+          For more information about HABET APK features and benefits, visit our{" "}
+          <Link href="/about" className="text-blue-600 hover:underline font-medium">
+            About page
+          </Link>
+          {" "}or read our{" "}
+          <Link href="/blog" className="text-blue-600 hover:underline font-medium">
+            betting guides and tips
+          </Link>
+          .
+        </p>
       </section>
 
       {/* Note section in Hindi */}
@@ -80,9 +104,15 @@ export default function DisclaimerPage() {
       </div>
 
       {/* Internal link to Home */}
-      <nav className="text-sm font-medium text-blue-600">
+      <nav className="flex flex-wrap gap-4 text-sm font-medium text-blue-600">
         <Link href="/" className="hover:underline">
           HABET APK – Download &amp; Play Now
+        </Link>
+        <Link href="/about" className="hover:underline">
+          About HABET APK
+        </Link>
+        <Link href="/blog" className="hover:underline">
+          Betting Tips &amp; Guides
         </Link>
       </nav>
     </main>

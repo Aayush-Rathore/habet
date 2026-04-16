@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import DownloadButton from "@/components/shared/DownloadButton";
 
 export const metadata: Metadata = {
@@ -18,7 +19,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://habetapk.com/logo.png",
+        url: "https://habetapk.com/logo.jpg",
         width: 512,
         height: 512,
         alt: "HABET APK",
@@ -31,12 +32,24 @@ export const metadata: Metadata = {
       "HABET APK Download 2026 – Live Sports Betting & Fast Withdrawal",
     description:
       "Download HABET APK for live sports betting. Bet on cricket, football & more. Earn real cash with fast and secure withdrawals.",
+    images: ["https://habetapk.com/logo.jpg"],
   },
 };
 
 export default function AboutPage() {
   return (
     <main className="container mx-auto max-w-3xl px-4 py-10">
+      {/* Logo */}
+      <div className="flex justify-center mb-8">
+        <Image
+          src="/logo.jpg"
+          alt="HABET APK Logo"
+          width={120}
+          height={120}
+          className="rounded-xl"
+        />
+      </div>
+
       <h1 className="mb-6 text-3xl font-bold leading-tight text-blue-700">
         HABET APK Download 2026 – Live Sports Betting &amp; Fast
         Withdrawal
@@ -89,11 +102,22 @@ export default function AboutPage() {
         <h2 className="mb-3 text-2xl font-semibold">
           Why Choose HABET APP?
         </h2>
-        <p className="text-base leading-relaxed">
+        <p className="text-base leading-relaxed mb-4">
           Agar aap ek best sports betting app in India, trusted cricket betting
           APK aur fast withdrawal sports app dhoondh rahe ho, to HABET
           APK ek perfect choice hai. Yeh app transparent system, smooth
           transactions aur 24/7 live sports access provide karta hai.
+        </p>
+        <p className="text-base leading-relaxed">
+          Check out our{" "}
+          <Link href="/blog" className="text-blue-600 hover:underline font-medium">
+            expert betting tips and strategies
+          </Link>
+          {" "}to maximize your winnings, or visit our{" "}
+          <Link href="/" className="text-blue-600 hover:underline font-medium">
+            homepage
+          </Link>
+          {" "}to download the app now.
         </p>
       </section>
 
@@ -120,12 +144,15 @@ export default function AboutPage() {
       </section>
 
       {/* Internal links */}
-      <nav className="flex gap-6 text-sm font-medium text-blue-600">
+      <nav className="flex flex-wrap gap-4 text-sm font-medium text-blue-600">
         <Link href="/" className="hover:underline">
           HABET APK – Home
         </Link>
         <Link href="/blog" className="hover:underline">
           Betting Tips &amp; Blog
+        </Link>
+        <Link href="/disclaimer" className="hover:underline">
+          Disclaimer
         </Link>
       </nav>
     </main>

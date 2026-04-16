@@ -20,6 +20,7 @@ export default function HeroSection() {
         <DownloadButton 
           id="hero-download-btn-2" 
           href="https://web-in.batwingo.com/en/affiliate-invited?c=WNRJ4DF4&s=1"
+          label="Betwin"
         />
       </div>
     </section>

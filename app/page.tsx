@@ -40,7 +40,7 @@ export const generateMetadata = async (): Promise<Metadata> => ({
     type: "website",
     images: [
       {
-        url: `${BASE_URL}/logo.png`,
+        url: `${BASE_URL}/logo.jpg`,
         alt: "HABET APK Download",
       },
     ],
@@ -50,6 +50,7 @@ export const generateMetadata = async (): Promise<Metadata> => ({
     title: "HABET APK Download 2026 with Live Odds & Fast Payouts",
     description:
       "HABET APK offers live betting, casino games, competitive odds, and secure transactions in one platform. Download HABET APK now.",
+    images: [`${BASE_URL}/logo.jpg`],
   },
 });
 
@@ -64,9 +65,20 @@ export default function Home() {
         <h1 className="text-3xl font-bold leading-tight text-foreground md:text-5xl mb-6">
           HABET APK Download 2026 – Live Odds &amp; Fast Payouts
         </h1>
-        <p className="max-w-2xl mx-auto text-base text-gray-300 md:text-lg">
+        <p className="max-w-2xl mx-auto text-base text-gray-300 md:text-lg mb-4">
           The <strong>HABET APK</strong> brings you live cricket betting, real-time odds, 
           casino games, and lightning-fast payouts — all in one secure platform built for Indian bettors.
+        </p>
+        <p className="max-w-2xl mx-auto text-base text-gray-300">
+          Explore our{" "}
+          <Link href="/blog" className="text-blue-500 hover:text-blue-400 underline font-medium">
+            betting tips and guides
+          </Link>
+          {" "}or read{" "}
+          <Link href="/about" className="text-blue-500 hover:text-blue-400 underline font-medium">
+            more about HABET APK
+          </Link>
+          .
         </p>
       </section>
 

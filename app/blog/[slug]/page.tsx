@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import Image from "next/image";
 import { getAllSlugs, getPostBySlug } from "@/lib/blog";
 import BlogPostContent from "@/components/blog/BlogPostContent";
 import JsonLd from "@/components/shared/JsonLd";
@@ -34,12 +35,13 @@ export async function generateMetadata({
       type: "article",
       publishedTime: frontmatter.date,
       modifiedTime: frontmatter.date,
-      images: [{ url: `${BASE_URL}/logo.png` }],
+      images: [{ url: `${BASE_URL}/logo.jpg` }],
     },
     twitter: {
       card: "summary_large_image",
       title: frontmatter.title,
       description: frontmatter.excerpt,
+      images: [`${BASE_URL}/logo.jpg`],
     },
   };
 }
@@ -146,6 +148,17 @@ export default async function BlogPostPage({
       <JsonLd data={articleSchema} />
       {faqSchema && <JsonLd data={faqSchema} />}
 
+      {/* Logo */}
+      <div className="flex justify-center mb-8">
+        <Image
+          src="/logo.jpg"
+          alt="HABET APK Logo"
+          width={100}
+          height={100}
+          className="rounded-xl"
+        />
+      </div>
+
       <header className="mb-8">
         <h1 className="text-3xl font-bold leading-tight mb-4">
           {frontmatter.title}
@@ -160,6 +173,27 @@ export default async function BlogPostPage({
       </header>
 
       <BlogPostContent html={htmlContent} />
+
+      {/* Internal Links Footer */}
+      <footer className="mt-12 pt-8 border-t border-border">
+        <div className="bg-muted/30 rounded-lg p-6">
+          <h3 className="text-lg font-semibold mb-4">Explore More</h3>
+          <div className="flex flex-wrap gap-4 text-sm">
+            <a href="/" className="text-primary hover:underline font-medium">
+              Download HABET APK
+            </a>
+            <a href="/blog" className="text-primary hover:underline font-medium">
+              All Betting Tips
+            </a>
+            <a href="/about" className="text-primary hover:underline font-medium">
+              About HABET
+            </a>
+            <a href="/disclaimer" className="text-primary hover:underline font-medium">
+              Disclaimer
+            </a>
+          </div>
+        </div>
+      </footer>
     </main>
   );
 }

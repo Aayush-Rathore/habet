@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { getAllPosts } from "@/lib/blog";
 import BlogCard from "@/components/blog/BlogCard";
 
@@ -19,12 +20,13 @@ export const metadata: Metadata = {
     description: DESCRIPTION,
     url: CANONICAL,
     type: "website",
-    images: [{ url: "https://habetapk.com/logo.png" }],
+    images: [{ url: "https://habetapk.com/logo.jpg" }],
   },
   twitter: {
     card: "summary_large_image",
     title: TITLE,
     description: DESCRIPTION,
+    images: ["https://habetapk.com/logo.jpg"],
   },
 };
 
@@ -33,6 +35,17 @@ export default async function BlogPage() {
 
   return (
     <main className="container mx-auto px-4 py-10 max-w-5xl">
+      {/* Logo */}
+      <div className="flex justify-center mb-8">
+        <Image
+          src="/logo.jpg"
+          alt="HABET APK Logo"
+          width={120}
+          height={120}
+          className="rounded-xl"
+        />
+      </div>
+
       <h1 className="text-3xl font-bold mb-3">{TITLE}</h1>
       <p className="text-muted-foreground mb-6">
         Expert cricket betting tips, IPL predictions, and sports betting guides
@@ -40,7 +53,11 @@ export default async function BlogPage() {
         <Link href="/" className="text-primary underline font-medium">
           HABET APK homepage
         </Link>{" "}
-        to download the app and start betting today.
+        to download the app and start betting today, or learn{" "}
+        <Link href="/about" className="text-primary underline font-medium">
+          more about HABET APK
+        </Link>
+        .
       </p>
 
       {posts.length === 0 ? (
