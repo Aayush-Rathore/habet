@@ -18,6 +18,11 @@ export const metadata: Metadata = {
   description:
     "Download HABET APK for live cricket, IPL, football odds and fast payouts. India's trusted betting platform.",
   metadataBase: new URL("https://habetapk.com"),
+  icons: {
+    icon: "/logo.jpg",
+    shortcut: "/logo.jpg",
+    apple: "/logo.jpg",
+  },
   openGraph: {
     siteName: "habetapk.com",
     type: "website",

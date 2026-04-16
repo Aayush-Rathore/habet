@@ -58,16 +58,18 @@ export default function Home() {
     <>
       <JsonLd data={websiteSchema} />
       <HeroSection />
-      <div className="mx-auto max-w-2xl px-4 py-6 text-center">
-        <a
-          href="https://web-in.batwingo.com/en/affiliate-invited?c=WNRJ4DF4&s=1"
-          className="btn-download inline-flex items-center justify-center gap-2 rounded-xl bg-blue-600 px-8 py-4 text-lg font-bold text-white no-underline transition-colors hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Download HABET App
-        </a>
-      </div>
+      
+      {/* Content Section - moved from hero */}
+      <section className="mx-auto max-w-4xl px-4 py-12 text-center">
+        <h1 className="text-3xl font-bold leading-tight text-foreground md:text-5xl mb-6">
+          HABET APK Download 2026 – Live Odds &amp; Fast Payouts
+        </h1>
+        <p className="max-w-2xl mx-auto text-base text-gray-300 md:text-lg">
+          The <strong>HABET APK</strong> brings you live cricket betting, real-time odds, 
+          casino games, and lightning-fast payouts — all in one secure platform built for Indian bettors.
+        </p>
+      </section>
+
       <div className="mx-auto max-w-2xl px-4 py-6">
         <AppInfoTable />
       </div>
