@@ -6,7 +6,7 @@ Build a Next.js 16 App Router site with SSG pages, an AI-powered blog generation
 
 ## Tasks
 
-- [-] 1. Install dependencies and initialize ShadCN UI
+- [x] 1. Install dependencies and initialize ShadCN UI
   - Run `npm install gray-matter remark remark-html @google/generative-ai`
   - Run `npm install -D fast-check`
   - Run `npx shadcn@latest init` with blue theme, radius 1rem, RSC enabled, targeting `app/globals.css`
@@ -15,61 +15,61 @@ Build a Next.js 16 App Router site with SSG pages, an AI-powered blog generation
   - Verify `components.json` is created with correct aliases (`@/components`, `@/lib/utils`)
   - _Requirements: 1.3, 9.4_
 
-- [~] 2. Set up global CSS, fonts, and core layout
-  - [~] 2.1 Add CSS animation keyframes and `.btn-download` class to `app/globals.css`
+- [x] 2. Set up global CSS, fonts, and core layout
+  - [x] 2.1 Add CSS animation keyframes and `.btn-download` class to `app/globals.css`
     - Add `@keyframes glow-pulse` and `@keyframes btn-bounce` as specified in design
     - Add `.btn-download { animation: btn-bounce 1.5s ease-in-out infinite, glow-pulse 2s ease-in-out infinite; }`
     - _Requirements: 2.4_
-  - [~] 2.2 Create `components/shared/DownloadButton.tsx` (Server Component)
+  - [x] 2.2 Create `components/shared/DownloadButton.tsx` (Server Component)
     - Plain `<a>` tag pointing to `https://invite.habet.online/?i=AX7JY162`
     - Apply `btn-download` CSS class plus Tailwind styling
     - Accept optional `className` prop
     - _Requirements: 2.4, 3.5, 4.3_
-  - [~] 2.3 Create `components/shared/JsonLd.tsx` (Server Component)
+  - [x] 2.3 Create `components/shared/JsonLd.tsx` (Server Component)
     - Accept `data: object` prop
     - Render `<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }} />`
     - _Requirements: 2.11, 6.8, 6.9, 8.6, 8.7, 8.8_
-  - [~] 2.4 Create `components/shared/DisclaimerNotice.tsx` (Server Component)
+  - [x] 2.4 Create `components/shared/DisclaimerNotice.tsx` (Server Component)
     - Render the 18+ responsible gambling notice text
     - _Requirements: 2.8_
-  - [~] 2.5 Create `components/layout/Header.tsx` (Server Component)
+  - [x] 2.5 Create `components/layout/Header.tsx` (Server Component)
     - Logo via `next/image` with `priority` wrapped in `<Link href="/">`
     - Nav links: Home (`/`), About (`/about`), Disclaimer (`/disclaimer`), Blog (`/blog`)
     - Responsive layout with ShadCN `Button` variant="ghost" for mobile menu trigger
     - _Requirements: 1.1, 1.6_
-  - [~] 2.6 Create `components/layout/Footer.tsx` (Server Component)
+  - [x] 2.6 Create `components/layout/Footer.tsx` (Server Component)
     - Render copyright notice: "Copyright © 2026 habetsports.com — HABET is for 18+ users only. Online betting involves risk — play responsibly and only where it is legal."
     - _Requirements: 1.2_
-  - [~] 2.7 Create `components/layout/StickyCTA.tsx` ("use client")
+  - [x] 2.7 Create `components/layout/StickyCTA.tsx` ("use client")
     - Fixed bottom bar, `md:hidden`, `z-50`
     - Use `useEffect` + `IntersectionObserver` on `#hero-download-btn` to toggle visibility
     - Renders `<DownloadButton className="w-full" />`
     - _Requirements: 1.5_
-  - [~] 2.8 Update `app/layout.tsx` (Root Layout)
+  - [x] 2.8 Update `app/layout.tsx` (Root Layout)
     - Load Inter via `next/font/google`, apply to `<html lang="en">`
     - Render `<Header />`, `{children}`, `<Footer />`, `<StickyCTA />`
     - Export default site-level `metadata` object with site name and base URL
     - _Requirements: 1.4, 1.7_
 
-- [~] 3. Implement blog file system utilities (`lib/blog.ts` and `lib/slugify.ts`)
-  - [~] 3.1 Create `lib/slugify.ts`
+- [x] 3. Implement blog file system utilities (`lib/blog.ts` and `lib/slugify.ts`)
+  - [x] 3.1 Create `lib/slugify.ts`
     - Export `slugify(title: string): string` — converts to kebab-case, strips special chars
     - Export `generateUniqueSlug(title: string, existingSlugs: string[]): string` — appends `-<timestamp>` on collision
     - _Requirements: 7.8, 10.2_
-  - [ ]* 3.2 Write property test for `generateUniqueSlug`
+  - [x] 3.2 Write property test for `generateUniqueSlug`
     - **Property 2: Slug uniqueness on collision**
     - **Validates: Requirements 7.8**
     - Use `fast-check` with arbitrary string arrays as existing slugs and arbitrary titles
     - Assert returned slug is never in the existing slugs set
     - Minimum 100 iterations
-  - [~] 3.3 Create `lib/blog.ts`
+  - [x] 3.3 Create `lib/blog.ts`
     - Export `parseMarkdownFile(filePath: string): Promise<BlogPost>` — gray-matter for frontmatter, remark+remark-html for body
     - Export `getAllPosts(): Promise<BlogPost[]>` — reads `/content/blogs/`, sorts by date descending, returns `[]` if directory missing
     - Export `getPostBySlug(slug: string): Promise<BlogPost | null>` — returns null if not found
     - Export `getAllSlugs(): Promise<string[]>`
     - Export `calculateReadingTime(markdown: string): string` — 200 wpm, `Math.ceil`
     - _Requirements: 5.2, 6.2, 6.6, 10.1, 10.4_
-  - [ ]* 3.4 Write property test for blog frontmatter round-trip
+  - [x] 3.4 Write property test for blog frontmatter round-trip
     - **Property 1: Blog frontmatter round-trip**
     - **Validates: Requirements 10.2, 10.4**
     - Use `fast-check` to generate arbitrary `BlogFrontmatter` objects
@@ -77,7 +77,7 @@ Build a Next.js 16 App Router site with SSG pages, an AI-powered blog generation
     - Assert all required fields (`title`, `slug`, `date`, `excerpt`, `keywords`, `author`, `readingTime`) are present with correct types
     - Minimum 100 iterations
 
-- [~] 4. Create seed blog posts and content directory
+- [x] 4. Create seed blog posts and content directory
   - Create `/content/blogs/` directory
   - Create `content/blogs/cricket-betting-tips-india-2026.md` with valid YAML frontmatter and ~1600-word body including H1, 4+ H2s, 2+ H3s, FAQ section, conclusion, and internal link to `/`
   - Create `content/blogs/habet-app-download-guide.md` with valid YAML frontmatter and ~1500-word body
@@ -85,47 +85,47 @@ Build a Next.js 16 App Router site with SSG pages, an AI-powered blog generation
   - Each file must have frontmatter fields: `title`, `slug`, `date`, `excerpt` (≤160 chars), `keywords`, `author`, `readingTime`
   - _Requirements: 10.1, 10.2, 10.3, 5.3_
 
-- [~] 5. Checkpoint — Ensure all tests pass
+- [x] 5. Checkpoint — Ensure all tests pass
   - Ensure all tests pass, ask the user if questions arise.
 
-- [~] 6. Build home page components
-  - [~] 6.1 Create `components/home/HeroSection.tsx` (Server Component)
+- [x] 6. Build home page components
+  - [x] 6.1 Create `components/home/HeroSection.tsx` (Server Component)
     - HABET logo via `next/image` with `priority={true}`
     - `<h1>` with text "HABET Sports Betting App 2026 – Live Odds & Fast Payouts"
     - Primary keyword "HABET sports betting app" in first paragraph
     - `<DownloadButton id="hero-download-btn" />` with bounce+glow animation
     - _Requirements: 2.1, 2.2, 2.3, 2.4, 9.1_
-  - [~] 6.2 Create `components/home/AppInfoTable.tsx` (Server Component)
+  - [x] 6.2 Create `components/home/AppInfoTable.tsx` (Server Component)
     - Table with rows: App Name (HABET APK), App Size (66.54 MB), App Bonus (Rs. 500 New User Bonus), App Developer (HABET.COM)
     - _Requirements: 2.5_
-  - [~] 6.3 Create `components/home/ScreenshotsGallery.tsx` ("use client")
+  - [x] 6.3 Create `components/home/ScreenshotsGallery.tsx` ("use client")
     - Horizontal scroll with CSS `scroll-snap` for 5 screenshots (`g1-ss1.jpeg` through `g1-ss5.jpeg`)
     - Each image via `next/image` with descriptive `alt` text
     - _Requirements: 2.6, 1.6, 9.1_
-  - [~] 6.4 Create `components/home/FeaturesSection.tsx` (Server Component)
+  - [x] 6.4 Create `components/home/FeaturesSection.tsx` (Server Component)
     - Four feature cards: Live Sports Betting, Casino & Live Games, Fast & Secure Transactions, Intuitive Mobile App
     - _Requirements: 2.7_
-  - [~] 6.5 Create `components/home/HowToDownload.tsx` (Server Component)
+  - [x] 6.5 Create `components/home/HowToDownload.tsx` (Server Component)
     - Step-by-step download instructions for Android and iOS
     - _Requirements: 2.7_
-  - [~] 6.6 Create `components/home/WithdrawalMethods.tsx` (Server Component)
+  - [x] 6.6 Create `components/home/WithdrawalMethods.tsx` (Server Component)
     - Bank Transfer, UPI, E-Wallets sections
     - _Requirements: 2.7_
-  - [~] 6.7 Create `components/home/WhyChooseHabet.tsx` (Server Component)
+  - [x] 6.7 Create `components/home/WhyChooseHabet.tsx` (Server Component)
     - Why Choose HABET section with key selling points
     - _Requirements: 2.7_
-  - [~] 6.8 Create `components/home/HomeFAQ.tsx` (Server Component)
+  - [x] 6.8 Create `components/home/HomeFAQ.tsx` (Server Component)
     - Static FAQ accordion using Tailwind (no client JS needed)
     - _Requirements: 2.7_
-  - [~] 6.9 Assemble `app/page.tsx` (Home Page)
+  - [x] 6.9 Assemble `app/page.tsx` (Home Page)
     - Compose all home components in order: HeroSection, AppInfoTable, ScreenshotsGallery, FeaturesSection, HowToDownload, WithdrawalMethods, WhyChooseHabet, HomeFAQ, DisclaimerNotice
     - Include two internal links to `/about` and `/blog` with keyword-rich anchor text
     - Export `generateMetadata` returning title, description, canonical, OpenGraph, Twitter Card tags
     - Embed WebSite JSON-LD via `<JsonLd data={websiteSchema} />`
     - _Requirements: 2.1–2.11, 8.3, 8.4, 8.5, 8.6, 8.9_
 
-- [~] 7. Build About and Disclaimer pages
-  - [~] 7.1 Create `app/about/page.tsx`
+- [x] 7. Build About and Disclaimer pages
+  - [x] 7.1 Create `app/about/page.tsx`
     - Convert `public/about.html` content to React JSX, preserving all text including Hindi/English sections
     - `<h1>` with text "HABET SPORTS APK Download 2026 – Live Sports Betting & Fast Withdrawal"
     - Primary keyword "HABET SPORTS APK" in first paragraph
@@ -133,20 +133,20 @@ Build a Next.js 16 App Router site with SSG pages, an AI-powered blog generation
     - Include `<DownloadButton />` and two internal links to other pages
     - Export `generateMetadata` with correct title, description, canonical, OG, Twitter tags
     - _Requirements: 3.1–3.7, 8.3, 8.4, 8.5, 8.9_
-  - [~] 7.2 Create `app/disclaimer/page.tsx`
+  - [x] 7.2 Create `app/disclaimer/page.tsx`
     - Convert `public/disclaimer.html` content to React JSX, preserving Hindi-language note section
     - `<h1>` with text "Disclaimer – HABET Betting App"
     - Include `<DownloadButton />` and internal link to Home page
     - Export `generateMetadata` with correct title, description, canonical, OG, Twitter tags
     - _Requirements: 4.1–4.5, 8.3, 8.4, 8.5, 8.9_
 
-- [~] 8. Build blog listing and blog post pages
-  - [~] 8.1 Create `components/blog/BlogCard.tsx` (Server Component)
+- [x] 8. Build blog listing and blog post pages
+  - [x] 8.1 Create `components/blog/BlogCard.tsx` (Server Component)
     - Props: `{ title, excerpt, date, slug }`
     - Use ShadCN `Card`, `CardHeader`, `CardTitle`, `CardContent`, `Badge`
     - Link to `/blog/[slug]`
     - _Requirements: 5.4, 5.5_
-  - [~] 8.2 Create `app/blog/page.tsx` (Blog Listing)
+  - [x] 8.2 Create `app/blog/page.tsx` (Blog Listing)
     - Call `getAllPosts()` at build time
     - Render grid of `<BlogCard />` components
     - Show "Coming soon" placeholder when no posts exist
@@ -154,11 +154,11 @@ Build a Next.js 16 App Router site with SSG pages, an AI-powered blog generation
     - Internal link to Home page with keyword-rich anchor text
     - Export `generateMetadata` with correct title, description, canonical, OG, Twitter tags
     - _Requirements: 5.1–5.7, 8.3, 8.4, 8.5, 8.9_
-  - [~] 8.3 Create `components/blog/BlogPostContent.tsx` (Server Component)
+  - [x] 8.3 Create `components/blog/BlogPostContent.tsx` (Server Component)
     - Accept `html: string` prop
     - Render `<article dangerouslySetInnerHTML={{ __html: html }} />`
     - _Requirements: 6.2, 6.4_
-  - [~] 8.4 Create `app/blog/[slug]/page.tsx` (Blog Post)
+  - [x] 8.4 Create `app/blog/[slug]/page.tsx` (Blog Post)
     - Call `getPostBySlug(slug)`, call `notFound()` if null
     - Implement `generateStaticParams` using `getAllSlugs()`
     - Render `<h1>` from frontmatter title, publication date, reading time
@@ -168,50 +168,50 @@ Build a Next.js 16 App Router site with SSG pages, an AI-powered blog generation
     - Export `generateMetadata` with title, description, canonical, OG Article tags (`publishedTime`, `modifiedTime`), Twitter tags
     - _Requirements: 6.1–6.11, 8.3, 8.4, 8.5, 8.7, 8.8, 8.9_
 
-- [~] 9. Implement SEO infrastructure (sitemap and robots)
-  - [~] 9.1 Create `app/sitemap.ts`
+- [x] 9. Implement SEO infrastructure (sitemap and robots)
+  - [x] 9.1 Create `app/sitemap.ts`
     - Use `MetadataRoute.Sitemap` type from Next.js
     - Include static routes: `/`, `/about`, `/disclaimer`, `/blog`
     - Include all blog slugs from `getAllPosts()` with `lastModified` from frontmatter date
     - Base URL: `https://habetsports.com`
     - _Requirements: 8.1_
-  - [~] 9.2 Create `app/robots.ts`
+  - [x] 9.2 Create `app/robots.ts`
     - Allow all crawlers (`User-agent: *`, `Allow: /`)
     - Reference sitemap URL: `https://habetsports.com/sitemap.xml`
     - _Requirements: 8.2_
 
-- [~] 10. Implement Gemini blog generation utilities
-  - [~] 10.1 Create `lib/gemini.ts` (server-only)
+- [x] 10. Implement Gemini blog generation utilities
+  - [x] 10.1 Create `lib/gemini.ts` (server-only)
     - Initialize `GoogleGenerativeAI` with `process.env.GEMINI_KEY`
     - Export `generateBlogPost(topic: string, keywords: string[]): Promise<string>`
     - Prompt instructs Gemini: English with natural Hindi phrases, H1 + 4+ H2s + 2+ H3s + FAQ (3+ Q&A) + conclusion, ≥1500 words, EEAT principles, internal link to `/`, specific data points
     - _Requirements: 7.2, 7.4, 7.5, 7.6, 7.9, 9.6_
-  - [~] 10.2 Add validation helpers to `lib/gemini.ts` or a new `lib/blog-validation.ts`
+  - [x] 10.2 Add validation helpers to `lib/gemini.ts` or a new `lib/blog-validation.ts`
     - Export `validateBlogStructure(content: string): boolean` — checks H1/H2/H3/FAQ/conclusion presence
     - Export `countWords(markdown: string): number` — splits on whitespace
     - Export `containsInternalLink(content: string, path: string): boolean` — checks for markdown link to path
     - _Requirements: 7.4, 7.5, 7.9_
-  - [ ]* 10.3 Write property test for `validateBlogStructure`
+  - [x] 10.3 Write property test for `validateBlogStructure`
     - **Property 3: Generated blog post structure invariant**
     - **Validates: Requirements 7.5**
     - Use `fast-check` to generate markdown strings with varied heading counts
     - Assert `validateBlogStructure` returns true iff all structural requirements are met
     - Minimum 100 iterations
-  - [ ]* 10.4 Write property test for `countWords`
+  - [x] 10.4 Write property test for `countWords`
     - **Property 4: Blog post word count minimum**
     - **Validates: Requirements 7.4**
     - Use `fast-check` to generate arbitrary word arrays, join into strings
     - Assert `countWords(text)` equals the known word count within ±5
     - Minimum 100 iterations
-  - [ ]* 10.5 Write property test for `containsInternalLink`
+  - [x] 10.5 Write property test for `containsInternalLink`
     - **Property 5: Internal link presence**
     - **Validates: Requirements 7.9**
     - Use `fast-check` to generate markdown strings with and without `[text](/)` links
     - Assert `containsInternalLink(content, '/')` returns true iff a link to `/` is present
     - Minimum 100 iterations
 
-- [~] 11. Implement the `/api/generate-blogs` route
-  - [~] 11.1 Create `app/api/generate-blogs/route.ts`
+- [x] 11. Implement the `/api/generate-blogs` route
+  - [x] 11.1 Create `app/api/generate-blogs/route.ts`
     - Export `POST` handler
     - Validate `Authorization: Bearer <CRON_SECRET>` header; return 401 if missing or wrong
     - Define keyword pool: cricket betting tips India, IPL match predictions, best sports betting app India 2026, HABET app kaise download kare, HABET live cricket betting, fantasy sports tips, kabaddi betting guide, football betting India, sports betting strategies for beginners
@@ -223,7 +223,7 @@ Build a Next.js 16 App Router site with SSG pages, an AI-powered blog generation
     - Return `{ success: true, generated: [{ slug, title }] }` on success
     - Return `{ success: false, error: string }` with 500 on Gemini failure (no partial writes)
     - _Requirements: 7.1–7.12, 9.6_
-  - [ ]* 11.2 Write property test for CRON_SECRET authorization
+  - [x] 11.2 Write property test for CRON_SECRET authorization
     - **Property 6: CRON_SECRET authorization**
     - **Validates: Requirements 7.12**
     - Export a pure `checkAuthorization(header: string | null, secret: string): boolean` helper from the route or a lib file
@@ -231,7 +231,7 @@ Build a Next.js 16 App Router site with SSG pages, an AI-powered blog generation
     - Assert `checkAuthorization` returns false for all non-matching strings
     - Assert `checkAuthorization` returns true for the exact secret value
     - Minimum 100 iterations
-  - [ ]* 11.3 Write property test for partial failure atomicity
+  - [x] 11.3 Write property test for partial failure atomicity
     - **Property 7: Partial failure atomicity**
     - **Validates: Requirements 7.11**
     - Mock `generateBlogPost` to throw at a random position (0, 1, or 2) in the 3-post loop
@@ -240,7 +240,7 @@ Build a Next.js 16 App Router site with SSG pages, an AI-powered blog generation
     - Use `fast-check` to vary the failure position
     - Minimum 100 iterations
 
-- [~] 12. Checkpoint — Ensure all tests pass and `next build` succeeds
+- [x] 12. Checkpoint — Ensure all tests pass and `next build` succeeds
   - Ensure all tests pass, ask the user if questions arise.
   - Run `next build` and confirm no TypeScript or ESLint errors.
 

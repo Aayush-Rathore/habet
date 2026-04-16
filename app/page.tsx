@@ -1,65 +1,103 @@
-import Image from "next/image";
+import type { Metadata } from "next";
+import Link from "next/link";
+import HeroSection from "@/components/home/HeroSection";
+import AppInfoTable from "@/components/home/AppInfoTable";
+import { ScreenshotsGallery } from "@/components/home/ScreenshotsGallery";
+import FeaturesSection from "@/components/home/FeaturesSection";
+import HowToDownload from "@/components/home/HowToDownload";
+import WithdrawalMethods from "@/components/home/WithdrawalMethods";
+import WhyChooseHabet from "@/components/home/WhyChooseHabet";
+import HomeFAQ from "@/components/home/HomeFAQ";
+import DisclaimerNotice from "@/components/shared/DisclaimerNotice";
+import JsonLd from "@/components/shared/JsonLd";
+
+const BASE_URL = "https://habetapk.com";
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "habetapk.com",
+  url: BASE_URL,
+  potentialAction: {
+    "@type": "SearchAction",
+    target: `${BASE_URL}/blog?q={search_term_string}`,
+    "query-input": "required name=search_term_string",
+  },
+};
+
+export const generateMetadata = async (): Promise<Metadata> => ({
+  title: "HABET APK Download 2026 with Live Odds & Fast Payouts",
+  description:
+    "HABET APK offers live betting, casino games, competitive odds, and secure transactions in one platform. Download HABET APK now.",
+  alternates: {
+    canonical: BASE_URL,
+  },
+  openGraph: {
+    title: "HABET APK Download 2026 with Live Odds & Fast Payouts",
+    description:
+      "HABET APK offers live betting, casino games, competitive odds, and secure transactions in one platform. Download HABET APK now.",
+    url: BASE_URL,
+    type: "website",
+    images: [
+      {
+        url: `${BASE_URL}/logo.png`,
+        alt: "HABET APK Download",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "HABET APK Download 2026 with Live Odds & Fast Payouts",
+    description:
+      "HABET APK offers live betting, casino games, competitive odds, and secure transactions in one platform. Download HABET APK now.",
+  },
+});
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <>
+      <JsonLd data={websiteSchema} />
+      <HeroSection />
+      <div className="mx-auto max-w-2xl px-4 py-6 text-center">
+        <a
+          href="https://web-in.batwingo.com/en/affiliate-invited?c=WNRJ4DF4&s=1"
+          className="btn-download inline-flex items-center justify-center gap-2 rounded-xl bg-blue-600 px-8 py-4 text-lg font-bold text-white no-underline transition-colors hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Download HABET App
+        </a>
+      </div>
+      <div className="mx-auto max-w-2xl px-4 py-6">
+        <AppInfoTable />
+      </div>
+      <ScreenshotsGallery />
+      <FeaturesSection />
+      <HowToDownload />
+      <WithdrawalMethods />
+      <WhyChooseHabet />
+      <HomeFAQ />
+      <section className="mx-auto max-w-3xl px-4 py-10 text-center">
+        <p className="text-gray-600">
+          <Link
+            href="/about"
+            className="font-semibold text-blue-600 hover:underline"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            Learn more about HABET APK
+          </Link>{" "}
+          or{" "}
+          <Link
+            href="/blog"
+            className="font-semibold text-blue-600 hover:underline"
           >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+            Read HABET betting tips and guides
+          </Link>
+          .
+        </p>
+      </section>
+      <div className="mx-auto max-w-3xl px-4 pb-10">
+        <DisclaimerNotice />
+      </div>
+    </>
   );
 }
