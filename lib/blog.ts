@@ -2,7 +2,13 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import { remark } from "remark";
-import remarkHtml from "remark-html";
+import remarkGfm from "remark-gfm";
+import remarkRehype from "remark-rehype";
+import rehypeRaw from "rehype-raw";
+import rehypeSlug from "rehype-slug";
+import rehypeStringify from "rehype-stringify";
+import type { Root } from "hast";
+import { visit } from "unist-util-visit";
 
 export interface BlogFrontmatter {
   title: string;
@@ -24,12 +30,57 @@ function getBlogsDir(): string {
   return path.join(process.cwd(), "content", "blogs");
 }
 
+/**
+ * Rehype plugin: classify internal vs external links and add appropriate
+ * attributes and styling classes.
+ *
+ * Internal links (starting with /) get:
+ *   - class="internal-link"  (styled as a pill/badge in CSS)
+ *   - no rel/target changes
+ *
+ * External links get:
+ *   - target="_blank" rel="noopener noreferrer"
+ *   - class="external-link"
+ */
+function rehypeClassifyLinks() {
+  return (tree: Root) => {
+    visit(tree, "element", (node) => {
+      if (node.tagName !== "a") return;
+
+      const href = (node.properties?.href as string) ?? "";
+
+      if (href.startsWith("/") && !href.startsWith("//")) {
+        // Internal link
+        const existing = (node.properties?.className as string[]) ?? [];
+        node.properties = {
+          ...node.properties,
+          className: [...existing, "internal-link"],
+        };
+      } else if (href.startsWith("http") || href.startsWith("//")) {
+        // External link
+        const existing = (node.properties?.className as string[]) ?? [];
+        node.properties = {
+          ...node.properties,
+          className: [...existing, "external-link"],
+          target: "_blank",
+          rel: "noopener noreferrer",
+        };
+      }
+    });
+  };
+}
+
 export async function parseMarkdownFile(filePath: string): Promise<BlogPost> {
   const raw = fs.readFileSync(filePath, "utf-8");
   const { data, content } = matter(raw);
 
   const result = await remark()
-    .use(remarkHtml, { sanitize: false })
+    .use(remarkGfm)
+    .use(remarkRehype, { allowDangerousHtml: true })
+    .use(rehypeRaw)
+    .use(rehypeSlug)
+    .use(rehypeClassifyLinks)
+    .use(rehypeStringify)
     .process(content);
 
   return {

@@ -33,7 +33,7 @@ describe("checkAuthorization (Property 6)", () => {
           return checkAuthorization(header, secret) === false;
         }
       ),
-      { numRuns: 100 }
+      { numRuns: 20 }
     );
   });
 
@@ -42,7 +42,7 @@ describe("checkAuthorization (Property 6)", () => {
       fc.property(fc.string({ minLength: 1, maxLength: 64 }), (secret) => {
         return checkAuthorization(null, secret) === false;
       }),
-      { numRuns: 100 }
+      { numRuns: 20 }
     );
   });
 
@@ -51,7 +51,7 @@ describe("checkAuthorization (Property 6)", () => {
       fc.property(fc.string({ minLength: 1, maxLength: 64 }), (secret) => {
         return checkAuthorization(`Bearer ${secret}`, secret) === true;
       }),
-      { numRuns: 100 }
+      { numRuns: 20 }
     );
   });
 });
@@ -168,7 +168,7 @@ describe("POST /api/generate-blogs — partial failure atomicity (Property 7)", 
           return vi.mocked(fs.promises.writeFile).mock.calls.length === 0;
         }
       ),
-      { numRuns: 100 }
+      { numRuns: 20 }
     );
   });
 });

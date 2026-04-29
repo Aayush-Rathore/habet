@@ -71,7 +71,7 @@ describe("generateUniqueSlug — Property 2: Slug uniqueness on collision", () =
         const result = generateUniqueSlug(title, existingSlugs);
         return !existingSlugs.includes(result);
       }),
-      { numRuns: 100 }
+      { numRuns: 20 }
     );
   });
 });

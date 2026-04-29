@@ -1,0 +1,346 @@
+{
+  "generatedAt": "2026-04-29T15:30:00.000Z",
+  "version": "1.0.0",
+  "summary": {
+    "totalPosts": 12,
+    "uniquePrimaryKeywords": 11,
+    "cannibalizationIssues": 1,
+    "nearDuplicateRisks": 1,
+    "schemaBreakdown": {
+      "Article": 5,
+      "HowTo": 7,
+      "FAQPage": 0
+    }
+  },
+  "keywordMapping": [
+    {
+      "slug": "cricket-betting-tips-india-2026",
+      "title": "Cricket Betting Tips India 2026 – Win More with HABET",
+      "primaryKeyword": "cricket betting tips India",
+      "secondaryKeywords": [
+        "IPL betting",
+        "HABET cricket",
+        "cricket betting strategy",
+        "online cricket betting India"
+      ],
+      "schemaType": "Article",
+      "schemaRationale": "Informational article providing tips and strategy — no step-by-step instructions or FAQ structure. Article schema is appropriate for editorial/advisory content.",
+      "searchIntent": "informational"
+    },
+    {
+      "slug": "ipl-betting-predictions-2026",
+      "title": "IPL Betting Predictions 2026 – Expert Tips & HABET Odds",
+      "primaryKeyword": "IPL betting predictions",
+      "secondaryKeywords": [
+        "IPL 2026 tips",
+        "best IPL betting app",
+        "IPL odds India",
+        "IPL match prediction"
+      ],
+      "schemaType": "Article",
+      "schemaRationale": "Expert predictions and analysis content — editorial in nature with no procedural steps. Article schema suits opinion/analysis posts.",
+      "searchIntent": "informational"
+    },
+    {
+      "slug": "habet-app-download-guide",
+      "title": "HABET App Download Guide 2026 – Android & iOS Step-by-Step",
+      "primaryKeyword": "HABET app download",
+      "secondaryKeywords": [
+        "HABET APK",
+        "HABET kaise download kare",
+        "HABET Android download",
+        "HABET iOS install"
+      ],
+      "schemaType": "HowTo",
+      "schemaRationale": "Step-by-step download guide with platform-specific instructions. HowTo schema enables rich results showing numbered steps in SERPs.",
+      "searchIntent": "transactional",
+      "cannibalizationWarning": "⚠️ CONFIRMED CANNIBALIZATION: Primary keyword 'HABET app download' (case-insensitive) is shared with slug 'habet-betting-app-download-guide-android-ios-2026'. These two posts directly compete for the same query."
+    },
+    {
+      "slug": "is-habet-app-real-or-fake-legitimacy-verification-2026",
+      "title": "Is HABET App Real or Fake? Legitimacy Verification 2026",
+      "primaryKeyword": "habet app real or fake",
+      "secondaryKeywords": [
+        "habet betting app real or fake",
+        "is habet trusted",
+        "habet app review",
+        "habet app safe",
+        "habet app legit",
+        "habet app genuine",
+        "habet app scam",
+        "habet app verified",
+        "habet app security"
+      ],
+      "schemaType": "Article",
+      "schemaRationale": "Trust and legitimacy verification content — review/analysis format. Article schema is appropriate. FAQPage could also be considered if FAQ section is prominent.",
+      "searchIntent": "informational",
+      "nearDuplicateWarning": "⚠️ NEAR-DUPLICATE RISK: Primary keyword 'habet app real or fake' is semantically near-identical to 'habet betting app real or fake' (slug: habet-betting-app-real-or-fake-complete-guide-2026). Google may treat these as competing for the same query. Consider consolidating or clearly differentiating content angles."
+    },
+    {
+      "slug": "habet-betting-app-download-guide-android-ios-2026",
+      "title": "HABET Betting App Download Guide - Android & iOS 2026",
+      "primaryKeyword": "habet app download",
+      "secondaryKeywords": [
+        "habet apk download",
+        "habet betting app download apk",
+        "ha bet app download",
+        "habet app download play store",
+        "habet app install",
+        "habet apk",
+        "download habet",
+        "habet android download",
+        "habet ios install"
+      ],
+      "schemaType": "HowTo",
+      "schemaRationale": "Detailed step-by-step download and installation guide for Android and iOS. HowTo schema is ideal for procedural content with distinct steps.",
+      "searchIntent": "transactional",
+      "cannibalizationWarning": "⚠️ CONFIRMED CANNIBALIZATION: Primary keyword 'habet app download' (case-insensitive) is shared with slug 'habet-app-download-guide'. These two posts directly compete for the same query. Recommendation: differentiate by making one post target 'habet apk download' and the other 'habet app download guide'."
+    },
+    {
+      "slug": "habet-vs-other-betting-apps-complete-comparison-2026",
+      "title": "HABET vs Other Betting Apps - Complete Comparison 2026",
+      "primaryKeyword": "habet betting app india",
+      "secondaryKeywords": [
+        "habet vs other apps",
+        "best betting app india",
+        "habet app features",
+        "habet app comparison",
+        "habet cricket app",
+        "habet app review",
+        "online betting india",
+        "cricket betting app india",
+        "habet odds comparison"
+      ],
+      "schemaType": "Article",
+      "schemaRationale": "Comparison/review article contrasting HABET against competitors. Article schema is appropriate for comparative editorial content.",
+      "searchIntent": "informational"
+    },
+    {
+      "slug": "how-to-withdraw-money-from-habet-step-by-step-guide-2026",
+      "title": "How to Withdraw Money from HABET - Step-by-Step Guide 2026",
+      "primaryKeyword": "habet withdrawal",
+      "secondaryKeywords": [
+        "habet withdraw money",
+        "habet payment methods",
+        "habet upi withdrawal",
+        "habet bank transfer",
+        "habet withdrawal time",
+        "habet minimum withdrawal",
+        "habet payout",
+        "habet cashout",
+        "habet withdrawal process"
+      ],
+      "schemaType": "HowTo",
+      "schemaRationale": "Step-by-step withdrawal process guide. HowTo schema is the strongest choice — enables rich results with numbered steps and estimated time in SERPs.",
+      "searchIntent": "transactional"
+    },
+    {
+      "slug": "habet-cricket-betting-markets-explained-complete-guide-2026",
+      "title": "HABET Cricket Betting Markets Explained - Complete Guide 2026",
+      "primaryKeyword": "habet cricket app",
+      "secondaryKeywords": [
+        "cricket betting markets",
+        "habet cricket betting",
+        "ipl betting markets",
+        "cricket live betting",
+        "habet app cricket app download",
+        "cricket odds explained",
+        "habet cricket odds",
+        "cricket betting guide india",
+        "habet cricket markets"
+      ],
+      "schemaType": "HowTo",
+      "schemaRationale": "Explanatory guide on cricket betting markets with structured sections. HowTo schema fits the 'how to use/understand' framing. Article schema is also viable if content is more editorial.",
+      "searchIntent": "informational"
+    },
+    {
+      "slug": "habet-ipl-betting-bonus-and-promotions-2026",
+      "title": "HABET IPL Betting Bonus and Promotions 2026",
+      "primaryKeyword": "habet ipl bonus",
+      "secondaryKeywords": [
+        "habet welcome bonus",
+        "habet promotions",
+        "ipl betting bonus",
+        "habet deposit bonus",
+        "habet free bets",
+        "habet cashback",
+        "habet referral bonus",
+        "habet loyalty rewards",
+        "habet ipl offers"
+      ],
+      "schemaType": "Article",
+      "schemaRationale": "Promotional content listing bonuses and offers. Article schema is appropriate. FAQPage could supplement if a FAQ section covers common bonus questions.",
+      "searchIntent": "transactional"
+    },
+    {
+      "slug": "habet-app-login-account-management-guide-2026",
+      "title": "HABET App Login and Account Management Guide 2026",
+      "primaryKeyword": "habet app login",
+      "secondaryKeywords": [
+        "cs habet online",
+        "habet account",
+        "habet login problem",
+        "habet password reset",
+        "habet account verification",
+        "habet kyc",
+        "habet account management",
+        "habet profile settings",
+        "habet account security"
+      ],
+      "schemaType": "HowTo",
+      "schemaRationale": "Step-by-step login and account management guide. HowTo schema is ideal — covers login steps, password reset, KYC verification as distinct procedural steps.",
+      "searchIntent": "transactional"
+    },
+    {
+      "slug": "habet-ipl-betting-tips-beginners-guide-india-2026",
+      "title": "HABET IPL Betting Tips for Beginners - Complete Guide India 2026",
+      "primaryKeyword": "ipl betting tips 2026",
+      "secondaryKeywords": [
+        "habet ipl betting",
+        "ipl betting guide india",
+        "cricket betting tips beginners",
+        "ipl betting strategy",
+        "habet cricket tips",
+        "ipl 2026 betting",
+        "cricket betting india beginners",
+        "ipl match betting tips",
+        "habet betting guide"
+      ],
+      "schemaType": "HowTo",
+      "schemaRationale": "Beginner's guide with actionable tips and strategy steps. HowTo schema fits the instructional framing for new bettors learning the process.",
+      "searchIntent": "informational"
+    },
+    {
+      "slug": "habet-betting-app-real-or-fake-complete-guide-2026",
+      "title": "HABET Betting App Real or Fake? Complete Verification Guide 2026",
+      "primaryKeyword": "habet betting app real or fake",
+      "secondaryKeywords": [
+        "habet app real or fake",
+        "is habet trusted",
+        "habet app safe",
+        "habet app legit",
+        "habet app scam",
+        "habet app verified",
+        "habet app review 2026",
+        "habet betting app review",
+        "habet app genuine"
+      ],
+      "schemaType": "HowTo",
+      "schemaRationale": "Verification guide with steps to check legitimacy. HowTo schema fits the 'how to verify' framing. FAQPage is also viable given the trust-question nature of the content.",
+      "searchIntent": "informational",
+      "nearDuplicateWarning": "⚠️ NEAR-DUPLICATE RISK: Primary keyword 'habet betting app real or fake' is semantically near-identical to 'habet app real or fake' (slug: is-habet-app-real-or-fake-legitimacy-verification-2026). Google may treat these as competing for the same query. Consider consolidating or clearly differentiating content angles."
+    }
+  ],
+  "cannibalizationReport": {
+    "confirmedCannibalization": [
+      {
+        "keyword": "habet app download",
+        "affectedSlugs": [
+          "habet-app-download-guide",
+          "habet-betting-app-download-guide-android-ios-2026"
+        ],
+        "severity": "HIGH",
+        "recommendation": "Consolidate into one post, or differentiate: assign 'HABET app download' to one post and 'habet apk download' as the primary keyword for the other. The older post (habet-app-download-guide) should be the canonical version."
+      }
+    ],
+    "nearDuplicateRisks": [
+      {
+        "keywords": [
+          "habet app real or fake",
+          "habet betting app real or fake"
+        ],
+        "affectedSlugs": [
+          "is-habet-app-real-or-fake-legitimacy-verification-2026",
+          "habet-betting-app-real-or-fake-complete-guide-2026"
+        ],
+        "severity": "MEDIUM",
+        "recommendation": "These two posts target nearly identical queries. Google may rank one over the other inconsistently. Options: (1) Consolidate into a single authoritative post, (2) Differentiate angles — e.g., one focuses on 'app legitimacy/licensing' and the other on 'user experience/reviews', (3) Add canonical tag pointing to the preferred post."
+      }
+    ],
+    "crossContaminationInSecondaryKeywords": [
+      {
+        "issue": "'habet app real or fake' appears as secondary keyword in 'habet-betting-app-real-or-fake-complete-guide-2026'",
+        "recommendation": "Remove 'habet app real or fake' from secondary keywords of habet-betting-app-real-or-fake-complete-guide-2026 to reduce overlap."
+      },
+      {
+        "issue": "'habet betting app real or fake' appears as secondary keyword in 'is-habet-app-real-or-fake-legitimacy-verification-2026'",
+        "recommendation": "Remove 'habet betting app real or fake' from secondary keywords of is-habet-app-real-or-fake-legitimacy-verification-2026 to reduce overlap."
+      }
+    ]
+  },
+  "schemaMarkupRecommendations": {
+    "Article": {
+      "posts": [
+        "cricket-betting-tips-india-2026",
+        "ipl-betting-predictions-2026",
+        "is-habet-app-real-or-fake-legitimacy-verification-2026",
+        "habet-vs-other-betting-apps-complete-comparison-2026",
+        "habet-ipl-betting-bonus-and-promotions-2026"
+      ],
+      "implementationNote": "Use Article schema with headline, author (HABET Sports Team), datePublished, dateModified, and description fields. Include publisher with logo.",
+      "jsonLdTemplate": {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "<post title>",
+        "author": {
+          "@type": "Organization",
+          "name": "HABET Sports Team"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "HABET",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "/logo.png"
+          }
+        },
+        "datePublished": "<ISO 8601 date>",
+        "dateModified": "<ISO 8601 date>",
+        "description": "<excerpt>"
+      }
+    },
+    "HowTo": {
+      "posts": [
+        "habet-app-download-guide",
+        "habet-betting-app-download-guide-android-ios-2026",
+        "how-to-withdraw-money-from-habet-step-by-step-guide-2026",
+        "habet-cricket-betting-markets-explained-complete-guide-2026",
+        "habet-app-login-account-management-guide-2026",
+        "habet-ipl-betting-tips-beginners-guide-india-2026",
+        "habet-betting-app-real-or-fake-complete-guide-2026"
+      ],
+      "implementationNote": "Use HowTo schema with name, description, step array. Each H3 section that represents a step should map to a HowToStep with name and text. Include totalTime where applicable.",
+      "jsonLdTemplate": {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": "<post title>",
+        "description": "<excerpt>",
+        "step": [
+          {
+            "@type": "HowToStep",
+            "name": "<step heading>",
+            "text": "<step description>"
+          }
+        ]
+      }
+    },
+    "FAQPage": {
+      "posts": [],
+      "implementationNote": "No posts currently use FAQPage schema as primary type. However, all posts contain FAQ sections — consider adding FAQPage as a secondary schema (alongside Article or HowTo) using mainEntity with Question/Answer pairs for the FAQ section. This can improve rich result eligibility.",
+      "jsonLdTemplate": {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "<question text>",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "<answer text>"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

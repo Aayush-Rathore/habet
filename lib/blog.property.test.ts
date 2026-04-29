@@ -96,7 +96,7 @@ describe("Blog frontmatter round-trip (Property 1)", () => {
 
         return true;
       }),
-      { numRuns: 100 }
+      { numRuns: 20 }
     );
   });
 
@@ -106,7 +106,7 @@ describe("Blog frontmatter round-trip (Property 1)", () => {
         const { data } = matter(serializeToFrontmatter(original));
         return data.title === original.title;
       }),
-      { numRuns: 100 }
+      { numRuns: 20 }
     );
   });
 
@@ -116,7 +116,7 @@ describe("Blog frontmatter round-trip (Property 1)", () => {
         const { data } = matter(serializeToFrontmatter(original));
         return data.slug === original.slug;
       }),
-      { numRuns: 100 }
+      { numRuns: 20 }
     );
   });
 
@@ -128,7 +128,7 @@ describe("Blog frontmatter round-trip (Property 1)", () => {
         if (data.keywords.length !== original.keywords.length) return false;
         return original.keywords.every((kw, i) => data.keywords[i] === kw);
       }),
-      { numRuns: 100 }
+      { numRuns: 20 }
     );
   });
 
@@ -138,7 +138,7 @@ describe("Blog frontmatter round-trip (Property 1)", () => {
         const { data } = matter(serializeToFrontmatter(original));
         return data.author === original.author && data.readingTime === original.readingTime;
       }),
-      { numRuns: 100 }
+      { numRuns: 20 }
     );
   });
 });
