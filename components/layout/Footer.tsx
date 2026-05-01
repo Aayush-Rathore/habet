@@ -73,7 +73,7 @@ export default function Footer() {
             <h3 className="font-semibold text-foreground mb-3">Download</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
-                <a href="https://invite.habet.online/?i=AX7JY162" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">
+                <a href="https://cp7.me/BYQSOY/30i50zd" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">
                   Download HABET APK
                 </a>
               </li>

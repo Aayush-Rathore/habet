@@ -8,6 +8,7 @@ const screenshots = [
   { src: "/g1-ss3.jpeg", alt: "HABET app casino games section featuring live dealer and slot games" },
   { src: "/g1-ss4.jpeg", alt: "HABET app fast withdrawal screen showing UPI and bank transfer options" },
   { src: "/g1-ss5.jpeg", alt: "HABET app account dashboard with balance, bonuses, and transaction history" },
+  { src: "/g1-ss6.jpeg", alt: "HABET app additional features and betting options screen" },
 ]
 
 export function ScreenshotsGallery() {

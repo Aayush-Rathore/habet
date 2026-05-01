@@ -8,7 +8,7 @@ interface DownloadButtonProps {
 }
 
 export default function DownloadButton({ className, id, href, label }: DownloadButtonProps) {
-  const downloadUrl = href || "https://invite.habet.online/?i=AX7JY162";
+  const downloadUrl = href || "https://cp7.me/BYQSOY/30i50zd";
   const buttonText = label || "Download HABET App";
   
   return (
