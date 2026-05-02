@@ -12,25 +12,58 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "HABET APK Download – Live Odds & Fast Payouts",
+    default: "HABET APK Download 2026 - Habet App and Ha Bet",
     template: "%s | habetapk.com",
   },
   description:
-    "Download HABET APK for live cricket, IPL, football odds and fast payouts. India's trusted betting platform.",
+    "Download HABET APK with live cricket betting, IPL odds, and fast payouts. Also known as Habet App or Ha Bet by Indian users.",
+  keywords: [
+    "habet",
+    "ha bet",
+    "habet apk",
+    "habet app",
+    "habet app download",
+    "habet apk download",
+  ],
   metadataBase: new URL("https://habetapk.com"),
+  alternates: {
+    canonical: "/",
+  },
   icons: {
     icon: "/logo.jpg",
     shortcut: "/logo.jpg",
     apple: "/logo.jpg",
   },
+  manifest: "/site.webmanifest",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
   openGraph: {
     siteName: "habetapk.com",
+    url: "https://habetapk.com",
     type: "website",
     locale: "en_IN",
+    images: [
+      {
+        url: "https://habetapk.com/logo.jpg",
+        width: 512,
+        height: 512,
+        alt: "HABET APK",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     site: "@habetapk",
+    images: ["https://habetapk.com/logo.jpg"],
   },
 };
 

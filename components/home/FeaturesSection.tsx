@@ -27,7 +27,7 @@ const features = [
 
 export default function FeaturesSection() {
   return (
-    <section className="px-4 py-12 md:py-16">
+    <section id="features" className="px-4 py-12 md:py-16">
       <h2 className="mb-8 text-center text-2xl font-bold text-gray-900 md:text-3xl">
         Key Features of HABET App
       </h2>

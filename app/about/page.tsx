@@ -148,6 +148,9 @@ export default function AboutPage() {
         <Link href="/" className="hover:underline">
           HABET APK – Home
         </Link>
+        <Link href="/habet-apk" className="hover:underline">
+          HABET APK Guide
+        </Link>
         <Link href="/blog" className="hover:underline">
           Betting Tips &amp; Blog
         </Link>

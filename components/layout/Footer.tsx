@@ -15,6 +15,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/habet-apk" className="hover:text-foreground transition-colors">
+                  HABET APK Guide
+                </Link>
+              </li>
+              <li>
                 <Link href="/about" className="hover:text-foreground transition-colors">
                   About HABET APK
                 </Link>
@@ -52,8 +57,8 @@ export default function Footer() {
             <h3 className="font-semibold text-foreground mb-3">Guides</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
-                <Link href="/blog/habet-app-download-guide" className="hover:text-foreground transition-colors">
-                  Download Guide
+                <Link href="/habet-apk" className="hover:text-foreground transition-colors">
+                  HABET App Download
                 </Link>
               </li>
               <li>

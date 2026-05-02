@@ -70,7 +70,7 @@ function StepList({
 
 export default function HowToDownload() {
   return (
-    <section className="bg-gray-50 px-4 py-12 md:py-16">
+    <section id="download-guide" className="bg-gray-50 px-4 py-12 md:py-16">
       <h2 className="mb-8 text-center text-2xl font-bold text-gray-900 md:text-3xl">
         How to Download HABET App
       </h2>

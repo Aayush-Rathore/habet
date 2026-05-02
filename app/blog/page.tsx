@@ -53,7 +53,12 @@ export default async function BlogPage() {
         <Link href="/" className="text-primary underline font-medium">
           HABET APK homepage
         </Link>{" "}
-        to download the app and start betting today, or learn{" "}
+        or the{" "}
+        <Link href="/habet-apk" className="text-primary underline font-medium">
+          HABET App download guide
+        </Link>{" "}
+        for quick setup,
+        {" "}or learn{" "}
         <Link href="/about" className="text-primary underline font-medium">
           more about HABET APK
         </Link>

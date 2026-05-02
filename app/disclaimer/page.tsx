@@ -108,6 +108,9 @@ export default function DisclaimerPage() {
         <Link href="/" className="hover:underline">
           HABET APK – Download &amp; Play Now
         </Link>
+        <Link href="/habet-apk" className="hover:underline">
+          HABET APK Guide
+        </Link>
         <Link href="/about" className="hover:underline">
           About HABET APK
         </Link>

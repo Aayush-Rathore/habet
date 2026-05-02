@@ -4,12 +4,13 @@ import { getAllPosts } from "@/lib/blog"
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const posts = await getAllPosts()
   const BASE_URL = "https://habetapk.com"
+  const SITE_LASTMOD = new Date("2026-05-02T00:00:00.000Z")
 
-  const staticRoutes = ["/", "/about", "/disclaimer", "/blog"].map(route => ({
+  const staticRoutes = ["/", "/habet-apk", "/about", "/disclaimer", "/blog"].map(route => ({
     url: `${BASE_URL}${route}`,
-    lastModified: new Date(),
+    lastModified: SITE_LASTMOD,
     changeFrequency: "weekly" as const,
-    priority: route === "/" ? 1.0 : 0.8,
+    priority: route === "/" ? 1.0 : route === "/habet-apk" ? 0.9 : 0.8,
   }))
 
   const blogRoutes = posts.map(post => ({
